@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		name="jdbc/oracle"
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.driver.OracleDriver" 
+		url="jdbc:oracle:thin:@192.168.1.100:1521:xe"
+		username="c##itbank"
+		password="it"
+		maxTotal="20"
+		maxIdle="10"
+		maxWaitMillis="-1"
+	/>
+	<!-- 
+		name : 컨테이너 내부 객체를 참조하기 위한 이름
+		auth : 객체 참조 인증 방식, 컨테이너에서 객체를 꺼내서 가져온다
+		type : 자원(Resource)의 자료형
+		driverClassName : 어떤 DB를 사용하는가에 따라 달라지는 클래스이름
+		url : DB에 접속할 주소, 커넥션풀은 모두 같은 주소를 가리킨다
+		username : DB 접속에 사용되는 계정이름
+		password : DB 접속에 사용되는 비밀번호
+		maxTotal : 커넥션풀에서 생성할 커넥션의 최대 개수
+		maxIdle : 커넥션풀에서 생성된 커넥션이 작업중이지 않은 개체의 최대 개수
+		maxWaitMillis : 접속불가시 대기할 최대 시간(밀리초)
+	 -->
+</Context>
